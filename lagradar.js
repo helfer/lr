@@ -18,7 +18,7 @@ function lagRadar( config = {} ) {
     .lagRadar {
       bottom: 10px;
       right: 10px;
-      position: absolute;
+      position: fixed;
       pointer-events: none;
     }
     .lagRadar-sweep > * {
