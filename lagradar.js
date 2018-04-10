@@ -5,7 +5,7 @@
 
 function lagRadar( config = {} ) {
   const {
-    frames = 50,    // number of frames to draw, more = worse performance
+    frames = 60,    // number of frames to draw, more = worse performance
     speed = 0.0017, // how fast the sweep moves (rads per ms)
     size = 300,     // outer frame px
     inset = 3,      // circle inset px
@@ -15,6 +15,12 @@ function lagRadar( config = {} ) {
   const svgns = 'http://www.w3.org/2000/svg';
 
   const styles = document.createTextNode(`
+    .lagRadar {
+      bottom: 10px;
+      right: 10px;
+      position: absolute;
+      pointer-events: none;
+    }
     .lagRadar-sweep > * {
       shape-rendering: crispEdges;
     }
